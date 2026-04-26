@@ -233,6 +233,23 @@
           <li>Permission status for features such as microphone, overlay, and screen capture.</li>
         </ul>
 
+        <h3>Account information</h3>
+        <ul>
+          <li>Your Google account identifier.</li>
+          <li>Your display name.</li>
+          <li>Your email address.</li>
+          <li>Your profile photo URL, if available.</li>
+          <li>Firebase Authentication tokens needed to keep you signed in.</li>
+        </ul>
+
+        <h3>Purchase and entitlement data</h3>
+        <ul>
+          <li>Purchase state and entitlement status.</li>
+          <li>Google Play Billing product identifiers.</li>
+          <li>Purchase tokens needed to verify or restore purchases.</li>
+          <li>App access state such as lifetime unlock and remaining credits.</li>
+        </ul>
+
         <h3>Local data stored on your device</h3>
         <ul>
           <li>Query history.</li>
@@ -252,6 +269,7 @@
           <li>Remember your settings and optional history, if enabled.</li>
           <li>Improve stability, debug errors, and maintain the app.</li>
           <li>Prevent abuse, fraud, or misuse of the app.</li>
+          <li>Sync account state, restore access on a signed-in account, and mirror purchase entitlements.</li>
         </ul>
       </section>
 
@@ -293,6 +311,9 @@
           <li>App maintenance.</li>
         </ul>
 
+        <h3>Firebase and Google Play</h3>
+        <p>When you sign in or use paid features, the app may send account, authentication, Firestore, and purchase-related data to Google Firebase and Google Play services to provide sign-in, cloud sync, purchase restoration, and entitlement handling.</p>
+
         <h3>Legal or safety reasons</h3>
         <p>We may disclose information if we believe it is reasonably necessary to comply with law, enforce our terms, or protect the rights, property, or safety of the app, our users, or others.</p>
       </section>
@@ -301,7 +322,10 @@
         <h2>7. Third-Party Services</h2>
         <p>The app may depend on third-party services, libraries, or APIs. Their own privacy practices apply to the information they process.</p>
         <ul>
+          <li>Firebase Authentication.</li>
+          <li>Cloud Firestore.</li>
           <li>Google Gemini API for AI responses.</li>
+          <li>Google Play Billing.</li>
           <li>Android speech recognition services for voice input.</li>
           <li>Google Play infrastructure and Android system services.</li>
         </ul>
@@ -314,6 +338,8 @@
           <li><strong>Screenshots:</strong> May be deleted immediately after processing or retained temporarily during the session, based on your settings.</li>
           <li><strong>Query history:</strong> May be saved only if you enable it.</li>
           <li><strong>Cached screenshots:</strong> May remain until you clear them or end the session.</li>
+          <li><strong>Account records:</strong> May remain in Firestore while your account exists or until you request deletion, subject to legal and operational requirements.</li>
+          <li><strong>Purchase and entitlement records:</strong> May remain while needed to verify access, restore purchases, and prevent duplicate entitlement grants.</li>
           <li><strong>Logs:</strong> May be retained for a limited time to diagnose crashes and reliability issues.</li>
         </ul>
         <p>When data is no longer needed, we delete it or make it inaccessible through normal app operations.</p>
